@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StreetFleet Express</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Urbanist', sans-serif;
+    }
+    .bg-primary {
+      background-color: #0066FF;
+    }
+    .rounded-button {
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- HERO SECTION -->
+  <section class="bg-primary text-white py-20">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h1 class="text-5xl font-bold mb-4">StreetFleet Express</h1>
+      <p class="text-2xl mb-6 font-semibold italic">StreetFleet – mișcăm orașul la secundă</p>
+      <a href="#aplica" class="bg-white text-primary font-semibold px-8 py-4 rounded-button hover:bg-gray-100 transition">Aplică Acum</a>
+    </div>
+  </section>
+
+  <!-- DESPRE NOI -->
+  <section class="py-16 bg-gray-50" id="despre">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-10">Cine suntem?</h2>
+      <p class="text-lg text-center mb-6">StreetFleet Express este flota urbană de livrare născută din oraș și pentru oraș. Operăm în principal în Sibiu, Brașov, București, Câmpulung și Cluj, cu sediul central în București.</p>
+      <p class="text-lg text-center mb-6">
+        Suntem dedicați livratorilor. Comisionul nostru este de doar <strong>8%</strong> — unul dintre cele mai mici din industrie.  
+        În plus, oferim <strong>vehicule de închiriat</strong> (biciclete, trotinete și scutere) la prețuri accesibile, pentru ca tu să poți începe rapid, fără investiții mari.
+      </p>
+      <p class="text-lg text-center">Alege să livrezi cu StreetFleet și fii parte dintr-o echipă care pune livratorii pe primul loc!</p>
+    </div>
+  </section>
+
+  <!-- AVANTAJE -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">De ce să alegi StreetFleet?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-md text-center">
+          <h3 class="text-xl font-semibold mb-3">Comision doar 8%</h3>
+          <p>Mai mulți bani în buzunarul tău față de alte flote sau firme.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-md text-center">
+          <h3 class="text-xl font-semibold mb-3">Vehicule de închiriat</h3>
+          <p>Închiriază o bicicletă, trotinetă sau scuter la prețuri accesibile și începe să livrezi imediat.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-md text-center">
+          <h3 class="text-xl font-semibold mb-3">Sprijin real</h3>
+          <p>Comunicare directă, suport rapid și o echipă care te înțelege.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORASE -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Locațiile unde poți livra</h2>
+      <ul class="flex flex-wrap justify-center gap-6 text-lg font-medium">
+        <li class="px-6 py-3 bg-primary text-white rounded-lg shadow-md">Sibiu</li>
+        <li class="px-6 py-3 bg-primary text-white rounded-lg shadow-md">Brașov</li>
+        <li class="px-6 py-3 bg-primary text-white rounded-lg shadow-md">București (Sediul nostru)</li>
+        <li class="px-6 py-3 bg-primary text-white rounded-lg shadow-md">Câmpulung</li>
+        <li class="px-6 py-3 bg-primary text-white rounded-lg shadow-md">Cluj</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FORMULAR APLICARE LIVRATORI -->
+  <section id="aplica" class="py-20 max-w-3xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8 text-center">Aplică acum să devii livrator StreetFleet</h2>
+    <form id="applicationForm" class="bg-white p-8 rounded-xl shadow-lg space-y-6" method="POST" action="https://formspree.io/f/myformid">
+      <!-- Schimbă linkul de la action cu linkul tău Formspree sau alt serviciu -->
+      <div>
+        <label for="fullname" class="block text-gray-700 font-medium mb-2">Nume complet*</label>
+        <input id="fullname" name="fullname" type="text" required class="w-full border border-gray-300 rounded-button px-3 py-2 focus:outline-none focus:border-primary" placeholder="Introdu numele complet" />
+      </div>
+      <div>
+        <label for="phone" class="block text-gray-700 font-medium mb-2">Număr de telefon*</label>
+        <input id="phone" name="phone" type="tel" required class="w-full border border-gray-300 rounded-button px-3 py-2 focus:outline-none focus:border-primary" placeholder="07XX XXX XXX" />
+      </div>
+      <div>
+        <label for="email" class="block text-gray-700 font-medium mb-2">Email*</label>
+        <input id="email" name="email" type="email" required class="w-full border border-gray-300 rounded-button px-3 py-2 focus:outline-none focus:border-primary" placeholder="email@exemplu.com" />
+      </div>
+      <div>
+        <label for="experience" class="block text-gray-700 font-medium mb-2">Experiență în livrări*</label>
+        <select id="experience" name="experience" required class="w-full border border-gray-300 rounded-button px-3 py-2 focus:outline-none focus:border-primary">
+          <option value="" disabled selected>Selectează experiența</option>
+          <option value="0">Fără experiență</option>
+          <option value="1">Sub 1 an</option>
+          <option value="2">1-2 ani</option>
+          <option value="3">Peste 2 ani</option>
+        </select>
+      </div>
+      <div>
+        <span class="block text-gray-700 font-medium mb-2">Tip vehicul preferat*</span>
+        <div class="flex gap-6">
+          <label><input type="radio" name="vehicle" value="bicicleta" required /> Bicicletă</label>
+          <label><input type="radio" name="vehicle" value="trotineta" required /> Trotinetă</label>
+          <label><input type="radio" name="vehicle" value="scuter" required /> Scuter</label>
+        </div>
+      </div>
+      <div>
+        <label for="worktime" class="block text-gray-700 font-medium mb-2">Program preferat*</label>
+        <select id="worktime" name="worktime" required class="w-full border border-gray-300 rounded-button px-3 py-2 focus:outline-none focus:border-primary">
+          <option value="" disabled selected>Selectează programul</option>
+          <option value="full-time">Full-time</option>
+          <option value="part-time">Part-time</option>
+          <option value="weekend">Weekend</option>
+        </select>
+      </div>
+      <div>
+        <label for="city" class="block text-gray-700 font-medium mb-2">Orașul în care vrei să livrezi*</label>
+        <select id="city" name="city" required class="w-full border border-gray-300 rounded-button px-3 py-2 focus:outline-none focus:border-primary">
+          <option value="" disabled selected>Selectează orașul</option>
+          <option value="sibiu">Sibiu</option>
+          <option value="brasov">Brașov</option>
+          <option value="bucuresti">București</option>
+          <option value="campulung">Câmpulung</option>
+          <option value="cluj">Cluj</option>
+        </select>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="bg-primary text-white font-semibold px-8 py-3 rounded-button hover:bg-blue-700 transition">Trimite aplicația</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-primary text-white text-center">
+    <h2 class="text-3xl font-bold mb-4">E timpul să te alături revoluției urbane!</h2>
+    <p class="mb-6">Aplică acum și începe să livrezi cu StreetFleet Express.</p>
+    <a href="#aplica" class="bg-white text-primary font-semibold px-6 py-3 rounded-button hover:bg-gray-100 transition">Aplică Acum</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p>&copy; 2025 StreetFleet Express. Toate drepturile rezervate.</p>
+      <p class="text-sm mt-2">Made in Sibiu 🇷🇴 | Sediu: București</p>
+    </div>
+  </footer>
+
+</body>
+</html>
